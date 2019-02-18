@@ -1,200 +1,82 @@
 <?php
-/* ERROR (E) --> will exit script immediately
- * 100 = E-mail was not sent
- *  01 = No receiver provided
- *  02 = No subject provideded => please provide the NO-SUBJECT header.
-    * INFORMATION NUMBER = 401
- *  03 = Standard HTML-supported option was not found nor set.
- *  04 = No message provided.
- *  05 = No e-mail extention was found
- *  06 = No $standardFrom was found.
- *  07 = StandardFrom is not on the allowed emailadresses list.
- * 
- * SUCCESS (S) --> will send an e-mail
- * 200 = E-mail sent...
- *  01 = successfully
- * 
- * CRITICAL (C) --> might exit script
- * 300 = Request was not provided correctly
- *  01 = @request $_REQUEST["NO-SUBJECT"] was set but the value wasn't "true".
- *  02 = Standard HTML-supported option was not set properly => $htmlSupported has to be true or false
- *  03 = HTML option was not provided correctly.
- *  04 = E-mail was not found on list of allowed e-mailadresses
- * 
- * INFORMATION (I) --> won't exit script
- * 400 = Not required but might be an issue
- *  01 = No subject provided
- *  02 = HTML-supported was not provided => searching for standard: not found = E 103
- *  04 = E-mail will be sent empty.
- *  05 = Waiting for input...
- * 
-*/
-require 'idea.php';
 include 'settings.php';
-// json_encode($arr);
-// implode("\n",$_REQUEST)
-/*echo $_SERVER['REQUEST_METHOD'];
-print_r($_POST);
-print_r($_REQUEST);
-print_r($_GET);*/
-session_start();
-if (isset($_COOKIE["PHPSESSID"])) {
-    $sessID = $_COOKIE["PHPSESSID"];
+if (isset($emailExtention)) {
+    $email = $emailExtention;
 } else {
-    header("Refresh:3");
-    echo "<h1>The page will reload in three seconds.</h1>";
+    echo "<h1>No e-mail domain was found</h1>";
+    echo "<h2>Go to emails.txt to set the e-mail domain.</h2>";
     exit;
 }
-if (!isset($_REQUEST["OK"])) {
-    require_once 'page.php';
-    echo "<pre>I 405</pre>";
-    exit;
-}
-logThis($sessID . " – ".$_SERVER['REQUEST_METHOD']." => ".json_encode($_REQUEST));
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>E-mail Service Provider Sending System</title>
+    <title>E-mail Service Provider</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/main.js"></script>
 </head>
 <body>
-    
-<?php
-echo "<pre>";
-if (!isset($_REQUEST["TO"]) || empty($_REQUEST["TO"])) {
-    echo "E 101";
-    echo "</pre>";exit;
-} else {
-    $to = $_REQUEST["TO"];
-}
-if (!isset($_REQUEST["SUBJECT"]) || empty($_REQUEST["SUBJECT"])) {
-    if (isset($_REQUEST["NO-SUBJECT"])) {
-        if ($_REQUEST["NO-SUBJECT"] == "true") {
-            $subject = "";
-            echo "\nI 401";
-        } else if ($_REQUEST["NO-SUBJECT"] == "false") {
-            $subject = "";
-            echo "\nC 301";
-        } else {
-            echo "E 104";
-            echo "</pre>";exit;
-        }
-    } else {
-        echo "\nE 102";
-        echo "</pre>";exit;
-    }
-} else {
-    $subject = $_REQUEST["SUBJECT"];
-}
-if (!isset($_REQUEST["HTML"]) || empty($_REQUEST["HTML"])) {
-    echo "\nI 402";
-    if (isset($htmlSupported)) {
-        if ($htmlSupported == true) {
-            $html = true;
-        } else if ($htmlSupported == false) {
-            $html = false;
-        } else {
-            echo "\nC 102";
-            echo "</pre>";exit;
-        }
-    } else {
-        echo "\nE 103";
-        echo "</pre>";exit;
-    }
-} else {
-    if ($_REQUEST["HTML"] == true) {
-        $html = true;
-    } else if ($_REQUEST["HTML"] == false) {
-        $html = false;
-    } else {
-        echo "\nC 303";
-        if (isset($htmlSupported)) {
-            if ($htmlSupported == true) {
-                $html = true;
-            } else if ($htmlSupported == false) {
-                $html = false;
-            } else {
-                echo "\nE 103";
-                echo "</pre>";exit;
-            }
-        }
-    }
-}
-if (!isset($_REQUEST["MESSAGE"]) || empty($_REQUEST["MESSAGE"])) {
-
-    echo "\nE 104";
-    echo "</pre>";exit;
-
-} else {
-    
-    if ($_REQUEST["MESSAGE"] !== null && $_REQUEST["MESSAGE"] !== "") {
-        $message = $_REQUEST["MESSAGE"];
-    } else {
-        echo "\nI 404";
-        $message = "";
-    }
-
-}
-
-if (isset($_REQUEST["FROM"]) || empty($_REQUEST["FROM"])) {
-    if (allowedEmailAdresses("emails.txt", strtolower($_REQUEST["FROM"]))) {
-        if (isset($emailExtention)) {
-            $from = strtolower($_REQUEST["FROM"])."@".$emailExtention;
-        } else {
-            echo "\nE 105";
-            echo "</pre>";exit;
-        }
-    } else {
-        echo "\nC 304";
-        echo "</pre>";exit;
-    }
-} else {
-    if (isset($standardFrom)) {
-        if (allowedEmailAdresses("emails.txt", strtolower($standardFrom))) {
-            if (isset($emailExtention)) {
-                $from = strtolower($standardFrom)."@".$emailExtention;
-            } else {
-                echo "\nE 105";
-                echo "</pre>";exit;
-            }
-        } else {
-            echo "\nE 107";
-            echo "</pre>";exit;
-        }  
-    } else {
-        echo "\nE 106";
-        echo "</pre>";exit;
-    }
-}
-
-
-$header = "From:".strtolower($from)." \r\n";
-//$header .= "Cc:example@example.com \r\n";
-if ($html == true) {
-    $header .= "MIME-Version: 1.0\r\n";
-    $header .= "Content-type: text/html\r\n";
-}
-
-$retval = mail ($to,$subject,$message,$header);
-//header("Content-Type: text/plain");
-if( $retval == true )
-{
-    echo "\nMessage sent successfully...";
-    echo "\nS 201";
-}
-else
-{
-    echo "\nMessage could not be sent...\n";
-}
-echo "</pre>";
-?>
+<h1 id="titel"></h1>
+<div id="voorbeeld"></div>
+<h1>E-mail</h1>
+    <form action="/E-mail/" method="POST">
+    From:        <input type="text" name="FROM" placeholder="example">@<?php echo $email; ?><br/>
+    To:        <input type="email" name="TO" placeholder="email@adres.nl" /><br>
+    Subject:  <input type="text" name="SUBJECT" placeholder="subject" /><br>
+    Message:    <br/>
+                <textarea name="MESSAGE" onchange="update()" placeholder="Dear ..." id="bericht"></textarea><br/>
+    This e-mail is in HTML:<br>
+    <label class="container">Yes
+  <input type="radio" name="HTML" onchange="update()" id="html" value="true">
+  <span class="checkmark"></span>
+</label>
+<label class="container">No
+  <input type="radio" checked="checked" onchange="update()" name="HTML" id="html-false" value="false">
+  <span class="checkmark"></span>
+</label>
+<input type="text" value="OK" name="OK" style="display: none;" />
+<input type="submit" value="Send it">
+    </form>
+<h1 style="font-size: 5vw;">Information Codes</h1>
+<h1>ERROR (<span style="color: #ff0000;">E</span>) --&gt; will exit script immediately</h1>
+<h2>100 = E-mail was not sent</h2>
+<ul>
+<li>01 = No receiver provided</li>
+<li>02 = No subject provideded =&gt; please provide the NO-SUBJECT header.
+<ul>
+<li>INFORMATION NUMBER = <span style="color: #00ff00;">I 401</span></li>
+</ul>
+</li>
+<li>03 = Standard HTML-supported option was not found nor set.</li>
+<li>04 = No message provided.</li>
+<li>05 = No e-mail extension was found</li>
+<li>06 = No <span style="color: #0000ff;">var</span> <span style="color: #339966;">$standardFrom</span> was found.</li>
+<li>07 = StandardFrom is not on the allowed e-mail addresses list.</li>
+</ul>
+<h1>SUCCESS (<span style="color: #008000;">S</span>) --&gt; will send an e-mail</h1>
+<h2>200 = E-mail sent...</h2>
+<ul>
+<li>01 = successfully</li>
+</ul>
+<h1>CRITICAL (<span style="color: #ff6600;">C</span>) --&gt; might exit script</h1>
+<h2>300 = Request was not provided correctly</h2>
+<ul>
+<li>01 = <span style="color: #0000ff;">REQUEST</span> <span style="color: #339966;">NO-SUBJECT</span> was set but the value wasn't "true".</li>
+<li>02 = Standard HTML-supported option was not set properly =&gt; <span style="color: #0000ff;">var</span> <span style="color: #339966;">$htmlSupported</span> has to be true or false</li>
+<li>03 = HTML option was not provided correctly.</li>
+<li>04 = E-mail was not found on list of allowed e-mail adresses</li>
+</ul>
+<h1>INFORMATION (<span style="color: #00ff00;">I</span>) --&gt; won't exit script</h1>
+<h2>400 = Not required but might be an issue</h2>
+<ul>
+<li>01 = No subject provided</li>
+<li>02 = HTML-supported was not provided =&gt; searching for standard: not found = <span style="color: #ff0000;">E 103</span></li>
+<li>04 = E-mail will be sent empty.</li>
+<li>05 = Waiting for input...</li>
+</ul>
+<div>&nbsp;</div>
 </body>
 </html>
-<?php
-exit;
-?>

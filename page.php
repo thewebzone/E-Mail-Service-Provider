@@ -28,7 +28,7 @@ if (isset($emailExtention)) {
     Onderwerp:  <input type="text" name="SUBJECT" placeholder="subject" /><br>
     Message:    <br/>
                 <textarea name="MESSAGE" onchange="update()" placeholder="Dear ..." id="bericht"></textarea><br/>
-    De e-mail is in HTML:<br>
+    This e-mail is in HTML:<br>
     <label class="container">Yes
   <input type="radio" name="HTML" onchange="update()" id="html" value="true">
   <span class="checkmark"></span>

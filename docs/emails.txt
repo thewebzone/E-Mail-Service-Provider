@@ -1,4 +1,0 @@
-##### DO NOT USE THIS LINE! #####
-example
-info
-john-doe

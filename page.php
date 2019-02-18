@@ -23,17 +23,17 @@ if (isset($emailExtention)) {
 <div id="voorbeeld"></div>
 <h1>E-mail</h1>
     <form action="/E-mail/" method="POST">
-    Van:        <input type="text" name="FROM" placeholder="voorbeeld">@<?php echo $email; ?><br/>
+    Van:        <input type="text" name="FROM" placeholder="example">@<?php echo $email; ?><br/>
     Aan:        <input type="email" name="TO" placeholder="email@adres.nl" /><br>
-    Onderwerp:  <input type="text" name="SUBJECT" placeholder="onderwerp" /><br>
+    Onderwerp:  <input type="text" name="SUBJECT" placeholder="subject" /><br>
     Message:    <br/>
-                <textarea name="MESSAGE" onchange="update()" placeholder="Beste ..." id="bericht"></textarea><br/>
+                <textarea name="MESSAGE" onchange="update()" placeholder="Dear ..." id="bericht"></textarea><br/>
     De e-mail is in HTML:<br>
-    <label class="container">Ja
+    <label class="container">Yes
   <input type="radio" name="HTML" onchange="update()" id="html" value="true">
   <span class="checkmark"></span>
 </label>
-<label class="container">Nee
+<label class="container">No
   <input type="radio" checked="checked" onchange="update()" name="HTML" id="html-false" value="false">
   <span class="checkmark"></span>
 </label>

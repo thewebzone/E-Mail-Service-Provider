@@ -17,3 +17,6 @@ Make users send e-mails via your website with PHP and a beautiful User Interface
 *) Do **_NOT_** fill in the first line: this won't be read.
 10) Go to the just renamed page.
 11) If you see any errors, follow the instructions to fix them.
+
+## Photo(s)
+![ScreenShot1](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot%201.png)

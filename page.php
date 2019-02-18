@@ -38,7 +38,7 @@ if (isset($emailExtention)) {
   <span class="checkmark"></span>
 </label>
 <input type="text" value="OK" name="OK" style="display: none;" />
-<input type="submit" value="Versturen">
+<input type="submit" value="Send it">
     </form>
 <h1 style="font-size: 5vw;">Information Codes</h1>
 <h1>ERROR (<span style="color: #ff0000;">E</span>) --&gt; will exit script immediately</h1>

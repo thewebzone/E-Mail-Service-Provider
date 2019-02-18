@@ -23,5 +23,6 @@ Here you can see some photos of the E-Mail Service Provide application.
 ___
 ![ScreenShot2](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot2.png)
 ___
+Easily translated
 ![ScreenShot1](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot%201.png)
 ___

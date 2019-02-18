@@ -31,4 +31,4 @@ ___
 ___
 ### Easily convert to HTML
 _Previews are included_
-![ScreenShot4](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot2.png)
+![ScreenShot4](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot4.png)

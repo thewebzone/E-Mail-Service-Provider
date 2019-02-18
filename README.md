@@ -2,7 +2,7 @@
 Make users send e-mails via your website with PHP and a beautiful User Interface.
 
 ## How-To Provide your users E-mail Service
-1) Install `E-Mail Service Provider` by clicking [here](https://github.com/ImmanuelNL/E-Mail-Service-Provider/files/2877532/E-Mail.Service.Provider.zip).
+1) Install `E-Mail Service Provider` by clicking [here](https://github.com/ImmanuelNL/E-Mail-Service-Provider/archive/v2.0.zip).
 2) Upload `E-Mail Service Provider` to your PHP project.
 3) Rename `E-Mail Service Provider` to `E-mail`  
 *) This means no spaces, preferably

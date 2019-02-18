@@ -23,9 +23,9 @@ if (isset($emailExtention)) {
 <div id="voorbeeld"></div>
 <h1>E-mail</h1>
     <form action="/E-mail/" method="POST">
-    Van:        <input type="text" name="FROM" placeholder="example">@<?php echo $email; ?><br/>
-    Aan:        <input type="email" name="TO" placeholder="email@adres.nl" /><br>
-    Onderwerp:  <input type="text" name="SUBJECT" placeholder="subject" /><br>
+    From:        <input type="text" name="FROM" placeholder="example">@<?php echo $email; ?><br/>
+    To:        <input type="email" name="TO" placeholder="email@adres.nl" /><br>
+    Subject:  <input type="text" name="SUBJECT" placeholder="subject" /><br>
     Message:    <br/>
                 <textarea name="MESSAGE" onchange="update()" placeholder="Dear ..." id="bericht"></textarea><br/>
     This e-mail is in HTML:<br>

@@ -20,5 +20,5 @@ Make users send e-mails via your website with PHP and a beautiful User Interface
 
 ## Photo(s)
 ![ScreenShot1](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot%201.png)
----
+___
 ![ScreenShot2](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot%202.png)

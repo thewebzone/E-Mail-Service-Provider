@@ -30,5 +30,5 @@ ___
 ![ScreenShot3](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot3.png)
 ___
 ### Easily convert to HTML
-_Previews are included_
+_Previews included_
 ![ScreenShot4](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot4.png)

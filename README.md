@@ -5,7 +5,6 @@ Make users send e-mails via your website with PHP and a beautiful user interface
 Yes, you can.  
 Visit [http://esp.thewebzone.nl/E-mail/](http://esp.thewebzone.nl/E-mail/) to see a developer (demo) version in action.
 
-## How to Provide your users with an E-mail Service?
 # Major update: translations are now available!
 Supported languages:
 * Dutch (Nederlands)

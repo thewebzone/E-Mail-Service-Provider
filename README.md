@@ -29,6 +29,6 @@ ___
 ### Easily add text
 ![ScreenShot3](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot3.png)
 ___
-### Easily convert to HTML
+### Easily send HTML
 _Previews included_
 ![ScreenShot4](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot4.png)

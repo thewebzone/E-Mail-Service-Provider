@@ -10,7 +10,9 @@ $langs["<country_abbreviation_lowercase>"] = "<full_language_name_in_your_langua
 ```
 6) You can change the default language under `settings.php` in the main directory.  
 *) Do this by changing `$lang` to the language abbreviation of your desired default language.
+
 _Country abbreviations can be found in ISO 639-1_
+
 ___
 ## Examples (Country abbreviations are according to ISO 639-1)
 ```php

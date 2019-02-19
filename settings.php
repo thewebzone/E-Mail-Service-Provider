@@ -1,6 +1,6 @@
 <?php
 $htmlSupported = false; 			// standard = false
-$dev = true; 						// default = false
+$dev = false; 						// default = false
 $emailExtention = "example.com"; 	// do NOT add @.
 $standardFrom = "info";		        // default = "info"
 /* See translations/info.php */

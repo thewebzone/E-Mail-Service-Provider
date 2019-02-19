@@ -1,3 +1,5 @@
 <?php
-$langs = ["en"=>"English","nl"=>"Nederlands"];
+$langs = [];
+$langs["en"] = "English";
+$langs["nl"] = "Nederlands";
 ?>

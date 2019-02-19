@@ -1,4 +1,4 @@
-# E-Mail Service Provider
+# E-mail Service Provider Sending System
 Make users send e-mails via your website with PHP and a beautiful user interface.
 
 ## How to Provide your users E-mail Service?

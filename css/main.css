@@ -118,3 +118,6 @@ pre {
 #voorbeeld input:focus {
     background-color: white;
 }
+center {
+    text-align: center;
+}

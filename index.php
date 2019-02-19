@@ -30,8 +30,22 @@
  *  05 = Waiting for input...
  * 
 */
+include_once 'settings.php';
+include ("translations/info.php");
+$changed = true; // prevent output when no language has been submitted.
+if(isset($_GET['lang'])) {
+    $changed = false;
+    foreach ($langs as $l => $name) {
+        if (strtolower($_GET['lang']) == $l) {
+            $lang = $l;
+            $changed = true;
+            break;
+        }
+    }
+}
+$_T = [];
+require_once("translations/".$lang.".php");
 require 'idea.php';
-include 'settings.php';
 // json_encode($arr);
 // implode("\n",$_REQUEST)
 /*echo $_SERVER['REQUEST_METHOD'];
@@ -43,7 +57,7 @@ if (isset($_COOKIE["PHPSESSID"])) {
     $sessID = $_COOKIE["PHPSESSID"];
 } else {
     header("Refresh:3");
-    echo "<h1>The page will reload in three seconds.</h1>";
+    echo "<h1>".$_T["TPWRA3S"]."</h1>";
     exit;
 }
 if (!isset($_REQUEST["OK"])) {
@@ -58,13 +72,12 @@ logThis($sessID . " – ".$_SERVER['REQUEST_METHOD']." => ".json_encode($_REQUES
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>E-mail Service Provider Sending System</title>
+    <title><?php echo $_T["TITLE"]; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/main.js"></script>
 </head>
 <body>
-    
 <?php
 echo "<pre>";
 if (!isset($_REQUEST["TO"]) || empty($_REQUEST["TO"])) {
@@ -182,7 +195,7 @@ if ($html == true) {
 }
 if ($dev == true) {
     $retval = true;
-    echo "\nE-mail wasn\'t sent, because developer mode was enabled while sending the e-mail.";
+    echo "\n".$_T["S_202"];
     echo "\nS 202";
 } else {
     $retval = mail ($to,$subject,$message,$header);
@@ -190,12 +203,12 @@ if ($dev == true) {
 //header("Content-Type: text/plain");
 if( $retval == true )
 {
-    echo "\nMessage sent successfully...";
+    echo "\n".$_T["S_201"];
     echo "\nS 201";
 }
 else
 {
-    echo "\nMessage could not be sent...\n";
+    echo "\n".$_T["MCNBS"]."\n";
 }
 echo "</pre>";
 ?>

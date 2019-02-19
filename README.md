@@ -1,6 +1,10 @@
 # E-mail Service Provider Sending System
 Make users send e-mails via your website with PHP and a beautiful user interface.
 
+## Can I see a demo version in action?
+Yes, you can.  
+Visit [http://esp.thewebzone.nl/E-mail/](http://esp.thewebzone.nl/E-mail/) to see a developer (demo) version in action.
+
 ## How to Provide your users with an E-mail Service?
 # Major update: translations are now available!
 Supported languages:

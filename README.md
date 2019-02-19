@@ -9,7 +9,7 @@ Make users send e-mails via your website with PHP and a beautiful User Interface
 5) Fill in your e-mail domain under `$emailExtention`.  
 *) Examples: `example.com` and `thewebzone.nl`  
 *) Do not add an @-sign
-6) Fill in the standard user(name) from who/which e-mails will be sent under `$standardFrom`.
+6) Fill in the usual user(name) from who/which e-mails will be sent under `$standardFrom`.
 7) Select if you would like to have HTML-support turned on by default under `$htmlSupported`.
 8) Now go to `emails.txt`.
 9) On each line, you fill in the available e-mail user(name)s.  

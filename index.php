@@ -179,8 +179,13 @@ if ($html == true) {
     $header .= "MIME-Version: 1.0\r\n";
     $header .= "Content-type: text/html\r\n";
 }
-
-$retval = mail ($to,$subject,$message,$header);
+if ($dev == true) {
+    $retval = true;
+    echo "\nMessage wasn\'t sent, because this is a development version";
+    echo "\nS 202";
+} else {
+    $retval = mail ($to,$subject,$message,$header);
+}
 //header("Content-Type: text/plain");
 if( $retval == true )
 {

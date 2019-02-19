@@ -5,8 +5,9 @@ Make users send e-mails via your website with PHP and a beautiful User Interface
 1) Install `E-Mail Service Provider` by clicking [here](https://github.com/ImmanuelNL/E-Mail-Service-Provider/archive/v2.0.zip).
 2) Upload `E-Mail Service Provider` to your PHP project.
 3) Rename `E-Mail Service Provider` to `E-mail`  
-4) Go to `settings.php`.
-5) Fill in your e-mail domain under `$emailExtention`.  
+4) Open `settings.php`.
+5) Fill in your e-mail domain under `$emailExtention`.
+*) Example: `example.com` or `thewebzone.nl`
 *) Do not add an @-sign
 6) Fill in the standard user(name) from who/which e-mails will be sent under `$standardFrom`.
 7) Select if you would like to have HTML-support turned on by default under `$htmlSupported`.

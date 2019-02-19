@@ -1,7 +1,7 @@
 # E-mail Service Provider Sending System
 Make users send e-mails via your website with PHP and a beautiful user interface.
 
-## How to Provide your users E-mail Service?
+## How to Provide your users with an E-mail Service?
 # Major update: translations are now available!
 Supported languages:
 * Dutch (Nederlands)
@@ -13,8 +13,8 @@ Supported languages:
 3) Rename `E-Mail Service Provider` to `E-mail`  
 4) Open `settings.php`.
 5) Fill in your e-mail domain under `$emailExtention`.  
-*) Examples: `example.com` and `thewebzone.nl`  
-*) Do not add an @-sign
+*) Examples: `example.com` and `thewebzone.nl`.  
+*) Do not add an @-sign.
 6) Fill in the usual user(name) from who/which e-mails will be sent under `$standardFrom`.
 7) Select if you would like to have HTML-support turned on by default under `$htmlSupported`.
 8) Open `emails.txt`.
@@ -29,11 +29,11 @@ If your language isn't supported, we advise you to translate it yourself or send
 
 ## Why would you choose E-mail Service Provider (ESP) and not another e-mail service provider application?
 1) ESP is an open-source project.
-2) ESP logs all e-mails sent, so you can keep track of user activity.
-3) ESP is easy to use, and easy to configure.
+2) ESP logs all e-mails sent so that you can keep track of user activity.
+3) ESP is easy to use and easy to configure.
 4) ESP can easily be translated.
 
-## Photo(s)
+## Photos
 Here you can see some photos of the E-Mail Service Provide application.
 ___
 ![ScreenShot2](https://github.com/ImmanuelNL/E-Mail-Service-Provider/blob/master/Images/ScreenShot2.png)

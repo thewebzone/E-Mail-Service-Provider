@@ -11,7 +11,7 @@ Make users send e-mails via your website with PHP and a beautiful User Interface
 *) Do not add an @-sign
 6) Fill in the usual user(name) from who/which e-mails will be sent under `$standardFrom`.
 7) Select if you would like to have HTML-support turned on by default under `$htmlSupported`.
-8) Now go to `emails.txt`.
+8) Open `emails.txt`.
 9) On each line, you fill in the available e-mail user(name)s.  
 *) Make sure you add the default e-mail address  
 *) Do **_NOT_** fill in the first line: this won't be read.

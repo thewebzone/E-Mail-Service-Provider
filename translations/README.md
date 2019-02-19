@@ -23,3 +23,5 @@ $langs["fr"] = "Français";
 $langs["nl"] = "Nederlands";
 ```
 ___
+## How do I add custom templates?
+Just add a "_new language_". You can name it whatever you would like to call it.

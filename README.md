@@ -1,4 +1,4 @@
-# E-Mail Service Provider
+# E-mail Service Provider Sending System
 Make users send e-mails via your website with PHP and a beautiful user interface.
 
 ## How to Provide your users E-mail Service?
@@ -17,6 +17,12 @@ Make users send e-mails via your website with PHP and a beautiful user interface
 *) Do **_NOT_** fill in the first line: this won't be read.
 10) Visit `http(s)://<your_domain>/E-mail/` in your web browser.
 11) If you see any errors, follow the instructions to fix them.
+
+## Why would you choose E-mail Service Provider (ESP) and not another e-mail service provider application?
+1) ESP is an open-source project.
+2) ESP logs all e-mails sent, so you can keep track of user activity.
+3) ESP is easy to use, and easy to configure.
+4) ESP can easily be translated.
 
 ## Photo(s)
 Here you can see some photos of the E-Mail Service Provide application.

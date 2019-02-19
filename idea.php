@@ -1,19 +1,26 @@
 <?php
 function allowedEmailAdresses($file="emails.txt", $check) {
-    $myfile = fopen($file, "r") or die("Unable to open file!");
+    $handle = fopen($file, "r") or die("Unable to open file!");
     // Output one line until end-of-file
     $ok = false;
     $i = 0;
-    while(!feof($myfile)) {
-      // echo fgets($myfile) . "<br>";
-      $user = fgets($myfile);
-      if ($user == $check) {
-        $ok = true;
-      }
-      $i++;
+    $pattern = '/\s*/m';
+    $replace = '';
+    if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+        // process the line read.
+        $line = preg_replace( $pattern, $replace, $line); // remove any spaces
+        if ($line == $check) {
+            $ok = true;   
+        }
     }
-    fclose($myfile);
-    if ($ok) {
+    fclose($handle);
+} else {
+    // error opening the file.
+    echo "<pre>E 100</pre>";
+    return false;
+} 
+    if ($ok == true) {
         return true;
     } else {
         return false;

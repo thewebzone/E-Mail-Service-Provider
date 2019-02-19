@@ -13,6 +13,7 @@
  * SUCCESS (S) --> will send an e-mail
  * 200 = E-mail sent...
  *  01 = successfully
+ *  02 = unsuccesfully, because developer mode was enabled while sending the e-mail. => $dev = true;
  * 
  * CRITICAL (C) --> might exit script
  * 300 = Request was not provided correctly
@@ -181,7 +182,7 @@ if ($html == true) {
 }
 if ($dev == true) {
     $retval = true;
-    echo "\nMessage wasn\'t sent, because this is a development version";
+    echo "\nE-mail wasn\'t sent, because developer mode was enabled while sending the e-mail.";
     echo "\nS 202";
 } else {
     $retval = mail ($to,$subject,$message,$header);

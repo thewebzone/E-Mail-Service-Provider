@@ -1,0 +1,12 @@
+::1 => Tue 19/02/2019 10:25 22,000000 UTC UTC (+00:00)
+767d54db6cd5c5ff845eaf2dd704f89c – POST => {"FROM":"info","TO":"superimmi@yahoo.nl","SUBJECT":"Invoice","MESSAGE":"Heyyyyyy","HTML":"false","OK":"OK","PHPSESSID":"767d54db6cd5c5ff845eaf2dd704f89c"}
+::1 => Tue 19/02/2019 10:25 59,000000 UTC UTC (+00:00)
+767d54db6cd5c5ff845eaf2dd704f89c – POST => {"FROM":"example","TO":"superimmi@yahoo.nl","SUBJECT":"Invoice","MESSAGE":"Heyyyyyy","HTML":"false","OK":"OK","PHPSESSID":"767d54db6cd5c5ff845eaf2dd704f89c"}
+::1 => Tue 19/02/2019 10:26 02,000000 UTC UTC (+00:00)
+767d54db6cd5c5ff845eaf2dd704f89c – POST => {"FROM":"example","TO":"superimmi@yahoo.nl","SUBJECT":"Invoice","MESSAGE":"Heyyyyyy","HTML":"false","OK":"OK","PHPSESSID":"767d54db6cd5c5ff845eaf2dd704f89c"}
+::1 => Tue 19/02/2019 10:26 06,000000 UTC UTC (+00:00)
+767d54db6cd5c5ff845eaf2dd704f89c – POST => {"FROM":"example","TO":"superimmi@yahoo.nl","SUBJECT":"Invoice","MESSAGE":"Heyyyyyy","HTML":"false","OK":"OK","PHPSESSID":"767d54db6cd5c5ff845eaf2dd704f89c"}
+::1 => Tue 19/02/2019 10:26 12,000000 UTC UTC (+00:00)
+767d54db6cd5c5ff845eaf2dd704f89c – POST => {"FROM":"example","TO":"superimmi@yahoo.nl","SUBJECT":"Invoice","MESSAGE":"Heyyyyyy","HTML":"false","OK":"OK","PHPSESSID":"767d54db6cd5c5ff845eaf2dd704f89c"}
+::1 => Tue 19/02/2019 10:26 30,000000 UTC UTC (+00:00)
+767d54db6cd5c5ff845eaf2dd704f89c – POST => {"FROM":"example","TO":"superimmi@yahoo.nl","SUBJECT":"Invoice","MESSAGE":"Heyyyyyy","HTML":"false","OK":"OK","PHPSESSID":"767d54db6cd5c5ff845eaf2dd704f89c"}

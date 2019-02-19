@@ -60,12 +60,13 @@ if (isset($emailExtention)) {
 <h2>200 = E-mail sent...</h2>
 <ul>
 <li>01 = successfully</li>
+<li>02 = unsuccessfully, because developer mode was enabled while sending the e-mail =&gt; <span style="color: #0000ff;">var</span> <span style="color: #339966;">$dev</span> = <span style="color: rgb(69, 113, 150);">true</span>;</li>
 </ul>
 <h1>CRITICAL (<span style="color: #ff6600;">C</span>) --&gt; might exit script</h1>
 <h2>300 = Request was not provided correctly</h2>
 <ul>
-<li>01 = <span style="color: #0000ff;">REQUEST</span> <span style="color: #339966;">NO-SUBJECT</span> was set but the value wasn't "true".</li>
-<li>02 = Standard HTML-supported option was not set properly =&gt; <span style="color: #0000ff;">var</span> <span style="color: #339966;">$htmlSupported</span> has to be true or false</li>
+<li>01 = <span style="color: #0000ff;">REQUEST</span> <span style="color: #339966;">NO-SUBJECT</span> was set but the value wasn't "<span style="color: rgb(69, 113, 150);">true</span>".</li>
+<li>02 = Standard HTML-supported option was not set properly =&gt; <span style="color: #0000ff;">var</span> <span style="color: #339966;">$htmlSupported</span> has to be <span style="color: rgb(69, 113, 150);">true</span> or <span style="color: rgb(69, 113, 150);">false</span></li>
 <li>03 = HTML option was not provided correctly.</li>
 <li>04 = E-mail was not found on list of allowed e-mail adresses</li>
 </ul>

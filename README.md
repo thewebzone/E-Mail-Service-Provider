@@ -15,7 +15,7 @@ Make users send e-mails via your website with PHP and a beautiful User Interface
 9) On each line, you fill in the available e-mail user(name)s.  
 *) Make sure you add the default e-mail address  
 *) Do **_NOT_** fill in the first line: this won't be read.
-10) Visit the just renamed page in your web browser.
+10) Visit http(s)://<your_domain>/E-mail/ in your web browser.
 11) If you see any errors, follow the instructions to fix them.
 
 ## Photo(s)

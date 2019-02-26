@@ -31,7 +31,7 @@ if ($changed == false) {
     <h1>
         <?php echo $_T["E-mail"]; ?>
     </h1>
-    <form action="/E-mail/" method="GET">
+    <form action="/E-mail?lang=<?php echo $lang; ?>" method="GET">
         <select name="lang">
             <?php 
     foreach ($langs as $l => $name) {

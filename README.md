@@ -11,7 +11,7 @@ Supported languages:
 * English (British)
 
 # How do I install E-Mail Service Provider?
-1) Install `E-Mail Service Provider` by clicking [here](https://github.com/ImmanuelNL/E-Mail-Service-Provider/archive/3.2.zip).
+1) Install `E-Mail Service Provider` by clicking [here](https://github.com/ImmanuelNL/E-Mail-Service-Provider/archive/3.2.1.zip).
 2) Upload `E-Mail Service Provider` to your PHP project.
 3) Rename `E-Mail Service Provider` to `E-mail`  
 4) Open `settings.php`.

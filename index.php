@@ -83,6 +83,7 @@ logThis($sessID . " – ".$_SERVER['REQUEST_METHOD']." => ".json_encode($_REQUES
 if ($dev == true) {
     echo "<pre>";
     echo "\n".$_T["S_202"];
+    echo "\n".$_T["S_202_R2"];
     echo "\nS 202";
     echo "</pre>";
 }

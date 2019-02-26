@@ -9,7 +9,8 @@ $_T["TITLE"] = "E-mail Service Provider Verstuur Systeem";
 $_T["NEMDWF"] = "Er is geen e-maildomein gevonden.";
 $_T["NEMDWF_INSTRUCTIONS"] = "Ga naar emails.txt om het e-maildomein in te stellen.";
 
-$_T["S_202"] = "Uw e-mail is niet verzonden, omdat de ontwikkelaarsmodus is ingeschakeld. Onderstaande berichten zijn een simulatie van ".$_T["TITLE"];
+$_T["S_202"] = "Uw e-mail is niet verzonden, omdat de ontwikkelaarsmodus is ingeschakeld.";
+$_T["S_202_R2"] = "Onderstaande berichten zijn een simulatie van ".$_T["TITLE"];
 $_T["S_201"] = "Bericht succesvol verzonden...";
 
 $_T["MCNBS"] = "Uw bericht kon niet verzonden worden...";

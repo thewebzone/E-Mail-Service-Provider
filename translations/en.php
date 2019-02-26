@@ -9,7 +9,8 @@ $_T["TITLE"] = "E-mail Service Provider Sending System";
 $_T["NEMDWF"] = "No e-mail domain was found.";
 $_T["NEMDWF_INSTRUCTIONS"] = "Go to emails.txt to set the e-mail domain.";
 
-$_T["S_202"] = "Your e-mail wasn't sent, because developer mode was enabled while sending the e-mail. The following messages are a simulation of ".$_T["TITLE"];;
+$_T["S_202"] = "Your e-mail wasn't sent, because developer mode was enabled while sending the e-mail.";
+$_T["S_202_R2"] = "The following messages are a simulation of ".$_T["TITLE"];
 $_T["S_201"] = "Message sent successfully...";
 
 $_T["MCNBS"] = "Your message could not be sent...";

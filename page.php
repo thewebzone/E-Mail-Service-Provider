@@ -31,7 +31,7 @@ if ($changed == false) {
     <h1>
         <?php echo $_T["E-mail"]; ?>
     </h1>
-    <form action="/E-mail?lang=<?php echo $lang; ?>" method="GET">
+    <form action="/E-mail/" method="GET">
         <select name="lang">
             <?php 
     foreach ($langs as $l => $name) {
@@ -46,7 +46,7 @@ if ($changed == false) {
         <input style="font-size: 1vw;border: 1px solid grey;border-radius: 25px;" type="submit" value="<?php echo $_T["CHOOSE_LANG"]; ?>" />
     </form>
     <br/>
-    <form action="/E-mail/" method="POST">
+    <form action="/E-mail/?lang=<?php echo $lang; ?>" method="POST">
         <?php echo $_T["FROM"]; ?>: <input type="text" name="FROM" placeholder="<?php echo $_T["EXAMPLE_FROM"]; ?>">@
         <?php echo $email; ?><br />
         <?php echo $_T["TO"]; ?>: <input type="email" name="TO" placeholder="<?php echo $_T["EXAMPLE_TO"]; ?>" /><br>

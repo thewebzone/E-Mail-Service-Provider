@@ -79,7 +79,14 @@ logThis($sessID . " – ".$_SERVER['REQUEST_METHOD']." => ".json_encode($_REQUES
 </head>
 <body>
 <?php
-echo "<pre>";
+   // NTU (Notify The User): Developer Mode Enabled.
+if ($dev == true) {
+    echo "<pre>";
+    echo "\n".$_T["S_202"];
+    echo "\nS 202";
+    echo "</pre>";
+}
+   echo "<pre>";
 if (!isset($_REQUEST["TO"]) || empty($_REQUEST["TO"])) {
     echo "E 101";
     echo "</pre>";exit;
@@ -195,8 +202,6 @@ if ($html == true) {
 }
 if ($dev == true) {
     $retval = true;
-    echo "\n".$_T["S_202"];
-    echo "\nS 202";
 } else {
     $retval = mail ($to,$subject,$message,$header);
 }

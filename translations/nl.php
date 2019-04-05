@@ -9,8 +9,7 @@ $_T["TITLE"] = "E-mail Service Provider Verstuur Systeem";
 $_T["NEMDWF"] = "Er is geen e-maildomein gevonden.";
 $_T["NEMDWF_INSTRUCTIONS"] = "Ga naar emails.txt om het e-maildomein in te stellen.";
 
-$_T["S_202"] = "Uw e-mail is niet verzonden, omdat de ontwikkelaarsmodus is ingeschakeld.";
-$_T["S_202_R2"] = "Onderstaande berichten zijn een simulatie van ".$_T["TITLE"];
+$_T["S_202"] = "Uw e-mail is niet verzonden, omdat de ontwikkelaarsmodus is ingeschakeld. Onderstaande berichten zijn een simulatie van ".$_T["TITLE"];
 $_T["S_201"] = "Bericht succesvol verzonden...";
 
 $_T["MCNBS"] = "Uw bericht kon niet verzonden worden...";
@@ -44,6 +43,7 @@ $_T["INFO_CODES"] = "Informatiecodes";
     $_T["IC_E_105"] = "Er is geen e-mailextensie gevonden.";
     $_T["IC_E_106"] = '<span style="color: #0000ff;">var</span> <span style="color: #339966;">$standardFrom</span> is niet gevonden.'; // No <span style="color: #0000ff;">var</span> <span style="color: #339966;">$standardFrom</span> was found.
     $_T["IC_E_107"] = "StandardFrom staat niet op de lijst met toegestane e-mailadressen.";
+    $_T["IC_E_108"] = "De gestuurde HTML-waarde is onbekend.";
 
     $_T["IC_S"] = "SUCCES";
     $_T["IC_S_EXPL"] = "zal een e-mail versturen.";
@@ -64,6 +64,10 @@ $_T["INFO_CODES"] = "Informatiecodes";
 
     $_T["IC_C_303"] = "HTML-optie is niet juist verstrekt.";
     $_T["IC_C_304"] = "Het e-mailadres is niet gevonden in de lijst met toegestane e-mailadressen.";
+    $_T["IC_C_305"] = "Dat sjabloon bestaat niet.";
+    $_T["IC_C_306"] = "De HTML-optie van de gebruiker is niet meegestuurd.";
+    $_T["IC_C_307"] = "Niet alle variabelen zijn verzonden of de variabelen zijn niet ontvangen.";
+    $_T["IC_C_308"] = "Het verzoek zal worden herhaald nadat de gebruiker is geïnformeerd, omdat de HTML-optie <span style='color: rgb(69, 113, 150);'>true</span> moet zijn.";
 
     $_T["IC_I"] = "INFORMATIE";
     $_T["IC_I_EXPL"] = "zal het script niet beëindigen.";

@@ -9,7 +9,7 @@
  *  05 = No e-mail extention was found
  *  06 = No $standardFrom was found.
  *  07 = StandardFrom is not on the allowed emailadresses list.
- * 
+ *  08 = The provided HTML-value is unknown
  * SUCCESS (S) --> will send an e-mail
  * 200 = E-mail sent...
  *  01 = successfully
@@ -21,7 +21,11 @@
  *  02 = Standard HTML-supported option was not set properly => $htmlSupported has to be true or false
  *  03 = HTML option was not provided correctly.
  *  04 = E-mail was not found on list of allowed e-mailadresses
- * 
+ *  05 = that template doesn't exist.
+ *  06 = the user's HTML-option was not provided.
+ *  07 = not all variables were sent or they haven't been received.
+ *  08 = the request will be redone, after the user has been informed, because the HTML-option has to be set to true.
+ *      => Critical and not Information, because the script might be stopped.
  * INFORMATION (I) --> won't exit script
  * 400 = Not required but might be an issue
  *  01 = No subject provided
@@ -83,7 +87,6 @@ logThis($sessID . " – ".$_SERVER['REQUEST_METHOD']." => ".json_encode($_REQUES
 if ($dev == true) {
     echo "<pre>";
     echo "\n".$_T["S_202"];
-    echo "\n".$_T["S_202_R2"];
     echo "\nS 202";
     echo "</pre>";
 }

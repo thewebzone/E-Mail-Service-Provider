@@ -1,5 +1,6 @@
 <?php
 include_once 'settings.php';
+require_once 'idea.php';
 if (isset($emailExtention)) {
     $email = $emailExtention;
 } else {
@@ -18,6 +19,7 @@ if (isset($emailExtention)) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -67,6 +69,16 @@ if ($changed == false) {
         <input type="text" value="OK" name="OK" style="display: none;" />
         <input style="border: 2px solid grey;border-radius: 25px;" type="submit" value="<?php echo $_T["SEND_BTN"]; ?>">
     </form>
+    <select name="templates" id="templates">
+    <?php
+    # STEP 1: get all directories
+	$dirs = getTemplates ();
+	foreach ($dirs as $dir) {
+		$dir = str_replace ( "templates/", "", $dir );
+		echo '<option value="'.$dir.'">'.ucfirst($dir).'</option>';
+	}
+	?>
+    </select><button onclick="getForm(document.getElementById('templates').value)">Selecteer</button>
     <h1 style="font-size: 5vw;">
         <?php echo $_T["INFO_CODES"]; ?>
     </h1>
@@ -85,8 +97,7 @@ if ($changed == false) {
             <?php echo $_T["IC_E_102"]; ?> =&gt;
             <?php echo $_T["IC_E_102_SOLUTION"]; ?>
             <ul>
-                <li>
-                    <?php echo $_T["IC_E_102_IN"]; ?> = <span style="color: #00ff00;">I 401</span></li>
+                <li><?php echo $_T["IC_E_102_IN"]; ?> = <span style="color: #00ff00;">I 401</span></li>
             </ul>
         </li>
         <li>03 =
@@ -103,6 +114,9 @@ if ($changed == false) {
         </li>
         <li>07 =
             <?php echo $_T["IC_E_107"]; ?>
+        </li>
+        <li>08 =
+            <?php echo $_T["IC_E_108"]; ?>
         </li>
     </ul>
     <h1>
@@ -132,12 +146,24 @@ if ($changed == false) {
             <?php echo $_T["IC_C_301"]; ?> "<span style="color: rgb(69, 113, 150);">true</span>".</li>
         <li>02 =
             <?php echo $_T["IC_C_302"]; ?> =&gt; <?php echo $_T["IC_C_302_PRE"]; ?> <span style="color: #0000ff;">var</span> <span style="color: #339966;">$htmlSupported</span>
-            <?php echo $_T["IC_C_302_S2"]; ?> <span style="color: rgb(69, 113, 150);">true</span> or <span style="color: rgb(69, 113, 150);">false</span><?php echo $_T["IC_C_302_POST"]; ?></li>
+            <?php echo $_T["IC_C_302_S2"]; ?> <span style="color: rgb(69, 113, 150);">true</span> <?php echo $_T["IC_C_302_OR"]; ?> <span style="color: rgb(69, 113, 150);">false</span><?php echo $_T["IC_C_302_POST"]; ?></li>
         <li>03 =
             <?php echo $_T["IC_C_303"]; ?>
         </li>
         <li>04 =
             <?php echo $_T["IC_C_304"]; ?>
+        </li>
+        <li>05 =
+            <?php echo $_T["IC_C_305"]; ?>
+        </li>
+        <li>06 =
+            <?php echo $_T["IC_C_306"]; ?>
+        </li>
+        <li>07 =
+            <?php echo $_T["IC_C_307"]; ?>
+        </li>
+        <li>08 =
+            <?php echo $_T["IC_C_308"]; ?>
         </li>
     </ul>
     <h1>
